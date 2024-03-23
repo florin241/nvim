@@ -4,6 +4,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use ('github/copilot.vim')
+    use ('lewis6991/gitsigns.nvim')
     use 'wbthomason/packer.nvim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -17,13 +18,14 @@ return require('packer').startup(function(use)
             vim.cmd.colorscheme "rose-pine"
         end
     }
+    -- use 'AlexvZyl/nordic.nvim'
     -- use ({
-        -- 'folke/tokyonight.nvim',
-        -- as = "tokyonight",
-        -- config = function()
-            -- vim.cmd.colorscheme "tokyonight"
-            -- end
-            --  })
+    --     'folke/tokyonight.nvim',
+    --     as = "tokyonight",
+    --     config = function()
+    --         vim.cmd.colorscheme "tokyonight"
+    --         end
+    --          })
 
             use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
             use {

@@ -1,4 +1,5 @@
 require("rose-pine").setup({
+
     variant = "main", -- auto, main, moon, or dawn
     dark_variant = "main", -- main, moon, or dawn
     dim_inactive_windows = false,
@@ -13,7 +14,7 @@ require("rose-pine").setup({
     styles = {
         bold = true,
         italic = false,
-        transparency = true,
+        transparency = false,
     },
 
     groups = {
@@ -66,6 +67,11 @@ require("rose-pine").setup({
 })
 
 vim.cmd("colorscheme rose-pine")
+
+vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
+vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})    
+vim.api.nvim_set_hl(0, "NormalNC", {bg = "none"})
+vim.api.nvim_set_hl(0, "NormalNCFloat", {bg = "none"})
 -- vim.cmd("colorscheme rose-pine-main")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
